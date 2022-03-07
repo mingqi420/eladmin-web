@@ -72,39 +72,39 @@
 </template>
 
 <script>
-import { form } from '@crud/crud'
+  import {form} from '@crud/crud'
 
-const defaultForm = {
-  id: null,
-  name: '',
-  jobSort: 999,
-  enabled: true
-}
-export default {
-  mixins: [form(defaultForm)],
-  props: {
-    jobStatus: {
-      type: Array,
-      required: true
-    }
-  },
-  data() {
-    return {
-      rules: {
-        name: [
-          { required: true, message: '请输入名称', trigger: 'blur' }
-        ],
-        jobSort: [
-          { required: true, message: '请输入序号', trigger: 'blur', type: 'number' }
-        ]
+  const defaultForm = {
+    id: null,
+    name: '',
+    jobSort: 999,
+    enabled: true
+  }
+  export default {
+    mixins: [form(defaultForm)],
+    props: {
+      jobStatus: {
+        type: Array,
+        required: true
+      }
+    },
+    data() {
+      return {
+        rules: {
+          name: [
+            {required: true, message: '请输入名称', trigger: 'blur'}
+          ],
+          jobSort: [
+            {required: true, message: '请输入序号', trigger: 'blur', type: 'number'}
+          ]
+        }
       }
     }
   }
-}
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
- ::v-deep .el-input-number .el-input__inner {
+  ::v-deep .el-input-number .el-input__inner {
     text-align: left;
   }
 </style>

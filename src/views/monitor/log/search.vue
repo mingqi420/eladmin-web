@@ -8,17 +8,18 @@
       style="width: 200px;"
       class="filter-item"
     />
-    <date-range-picker v-model="query.createTime" class="date-item" />
-    <rrOperation />
+    <date-range-picker v-model="query.createTime" class="date-item"/>
+    <rrOperation/>
   </div>
 </template>
 
 <script>
-import { header } from '@crud/crud'
-import rrOperation from '@crud/RR.operation'
-import DateRangePicker from '@/components/DateRangePicker'
-export default {
-  components: { rrOperation, DateRangePicker },
-  mixins: [header()]
-}
+  import {header} from '@crud/crud'
+  import rrOperation from '@crud/RR.operation'
+  import DateRangePicker from '@/components/DateRangePicker'
+
+  export default {
+    components: {rrOperation, DateRangePicker},
+    mixins: [header()]
+  }
 </script>
